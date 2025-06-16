@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "oxc.oxc-vscode",
+        "biomejs.biome",
+        "antfu.file-nesting",
+        "vue.volar",
+        "bradlc.vscode-tailwindcss"
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "extends": ["oxlint:recommended"],
+    "plugins": ["promise", "import"],
+    "rules": {
+        "no-alert": "error",
+        "no-plusplus": "off",
+        "no-bitwise": "error",
+        "no-empty": "error",
+        "no-empty-function": "error",
+        "no-eq-null": "error",
+        "no-var": "error",
+        "no-restricted-globals": ["error", "event"],
+        "no-array-for-each": "off",
+        "no-import-type-side-effects": "error",
+        "block-scoped-var": "error",
+        "no-unexpected-multiline": "error",
+        "no-unneeded-ternary": "error",
+        "no-useless-concat": "error",
+        "import/no-duplicates": "error",
+        "no-lonely-if": "error",
+        "no-else-return": "error",
+        "eqeqeq": ["error", "smart"],
+        "no-redeclare": "error",
+        "no-negated-condition": "error",
+        "default-param-last": "error",
+        "no-duplicate-imports": "error",
+        "yoda": "error",
+        "no-multi-str": "error",
+        "import/consistent-type-specifier-style": "error",
+        "promise/prefer-await-to-then": "error",
+        "typescript/consistent-type-imports": "error",
+        "typescript/no-empty-interface": "error",
+        "unicorn/no-console-spaces": "error",
+        "sort-imports": [
+            "error",
+            {
+                "ignoreCase": false,
+                "ignoreDeclarationSort": true,
+                "ignoreMemberSort": false,
+                "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+                "allowSeparatedGroups": false
+            }
+        ]
+    }
+}

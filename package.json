@@ -1,0 +1,39 @@
+{
+    "name": "nuxtui-pro-template",
+    "type": "module",
+    "version": "1.0.0",
+    "private": true,
+    "packageManager": "pnpm@10.12.1",
+    "description": "Nuxt UI Pro template",
+    "author": "Nicola Spadari",
+    "engines": {
+        "node": ">=23"
+    },
+    "scripts": {
+        "dev": "nuxt dev",
+        "build": "ROLLDOWN_OPTIONS_VALIDATION=loose nuxt build",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "preinstall": "npx only-allow pnpm",
+        "postinstall": "nuxt prepare",
+        "lint": "oxlint --fix --fix-suggestions --fix-dangerously ; biome check --write ."
+    },
+    "dependencies": {
+        "@nuxt/ui-pro": "^3.1.3",
+        "nuxt": "^3.17.5"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "^1.9.4",
+        "@iconify-json/lucide": "^1.2.49",
+        "@nuxt/image": "^1.10.0",
+        "@vueuse/core": "^13.3.0",
+        "@vueuse/nuxt": "^13.3.0",
+        "nuxt-svgo": "^4.2.2",
+        "oxlint": "^1.1.0",
+        "typescript": "^5.8.3"
+    },
+    "resolutions": {
+        "typescript": "npm:tslite@latest",
+        "vite": "npm:rolldown-vite@latest"
+    }
+}

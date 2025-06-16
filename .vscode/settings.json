@@ -1,0 +1,53 @@
+{
+	// Use Biome as default formatter
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.formatOnSave": true,
+	// Enable Oxlint
+	"oxc.enable": true,
+	"oxc.lint.run": "onType",
+	// Tailwind compatibility
+	"tailwindCSS.validate": true,
+	"tailwindCSS.experimental.classRegex": [
+		[
+			"ui:\\s*{([^)]*)\\s*}",
+			"[\"'`]([^\"'`]*).*?[\"'`]"
+		],
+		[
+			"/\\*\\s?ui\\s?\\*/\\s*{([^;]*)}",
+			":\\s*[\"'`]([^\"'`]*).*?[\"'`]"
+		]
+	],
+	"tailwindCSS.classAttributes": [
+		"class",
+		"ui"
+	],
+	"files.associations": {
+		"*.css": "tailwindcss"
+	},
+	"editor.quickSuggestions": {
+		"strings": "on"
+	},
+	// Auto fix with Biome
+	"editor.codeActionsOnSave": {
+		"quickfix.biome": "explicit",
+		"source.organizeImports.biome": "explicit"
+	},
+	// Biome configuration
+	"biome.enabled": true,
+	"biome.lsp.bin": "./node_modules/@biomejs/biome/bin/biome",
+	"[javascript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[vue]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	}
+}

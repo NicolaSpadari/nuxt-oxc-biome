@@ -1,0 +1,9 @@
+onlyBuiltDependencies:
+  - '@biomejs/biome'
+  - '@parcel/watcher'
+  - '@tailwindcss/oxide'
+  - better-sqlite3
+  - esbuild
+  - rolldown
+  - sharp
+  - vue-demi
