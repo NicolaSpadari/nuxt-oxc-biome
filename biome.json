@@ -1,11 +1,17 @@
 {
-    "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
-    "organizeImports": {
-        "enabled": true
-    },
+    "$schema": "https://biomejs.dev/schemas/2.0.5/schema.json",
+    "assist": { "actions": { "source": { "organizeImports": "on" } } },
     "files": {
-        "include": ["**/*.js", "**/*.ts", "**/*.vue", "**/*.json"],
-        "ignore": [".nuxt", ".output", "dist", "node_modules"]
+        "includes": [
+            "**/*.js",
+            "**/*.ts",
+            "**/*.vue",
+            "**/*.json",
+            "!**/.nuxt",
+            "!**/.output",
+            "!**/dist",
+            "!**/node_modules"
+        ]
     },
     "linter": {
         "enabled": true,
@@ -17,6 +23,18 @@
             "correctness": {
                 "noUnusedImports": "error",
                 "noUnusedVariables": "error"
+            },
+            "style": {
+                "noParameterAssign": "error",
+                "useAsConstAssertion": "error",
+                "useDefaultParameterLast": "error",
+                "useEnumInitializers": "error",
+                "useSelfClosingElements": "error",
+                "useSingleVarDeclarator": "error",
+                "noUnusedTemplateLiteral": "error",
+                "useNumberNamespace": "error",
+                "noInferrableTypes": "error",
+                "noUselessElse": "error"
             }
         }
     },
@@ -33,5 +51,18 @@
             "semicolons": "always",
             "trailingCommas": "none"
         }
-    }
+    },
+    "overrides": [
+        {
+            "includes": ["**/*.vue"],
+            "linter": {
+                "rules": {
+                    "correctness": {
+                        "noUnusedVariables": "off",
+                        "noUnusedImports": "off"
+                    }
+                }
+            }
+        }
+    ]
 }
